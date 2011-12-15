@@ -1,0 +1,9 @@
+<!ENTITY about_dialog.title "About Piigeon">
+<!ENTITY about_dialog.version "Version">
+<!ENTITY about_dialog.page "Project Page">
+<!ENTITY about_dialog.info "Other Information">
+<!ENTITY about_dialog.policy "Privacy Policy">
+<!ENTITY about_dialog.manual "User Manual">
+<!ENTITY about_dialog.feedback "Send Us Feedback">
+<!ENTITY about_dialog.contributers "Contributers">
+<!ENTITY about_dialog.sophia "Xiao (Sophia) Wang">

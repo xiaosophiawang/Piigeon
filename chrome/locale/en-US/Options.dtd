@@ -1,0 +1,7 @@
+<!ENTITY options.tab_policy "Privacy Policy">
+<!ENTITY options.tab_monitor "Input Monitor">
+<!ENTITY options.policy_content "Please help us to improve Piigeon and learn about Web privacy in practice by opting in to report anonymous information about how Web sites protect passwords. We do NOT collect information that can be used to identify you or link you to Web browsing activities, as that would defeat our goal of protecting your privacy.">
+<!ENTITY options.policy_link "Click here for our detailed privacy policy">
+<!ENTITY options.policy_allow "Allow Piigeon to report anonymous information.">
+<!ENTITY options.policy_disallow "Do not allow Piigeon to report anonymous information.">
+<!ENTITY options.monitor_all "Provide Piigeon with feedback for all form inputs.">
