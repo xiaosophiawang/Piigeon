@@ -1,0 +1,8 @@
+content	piigeon	chrome/content/
+locale	piigeon	en-US chrome/locale/en-US/
+skin piigeon classic/1.0 chrome/skin/
+
+overlay	chrome://browser/content/browser.xul	chrome://piigeon/content/overlay.xul
+overlay chrome://navigator/content/navigator.xul chrome://piigeon/content/overlay.xul
+overlay	chrome://passwordmgr/content/passwordManager.xul	chrome://piigeon/content/passwordManagerOverlay.xul
+overlay	chrome://browser/content/sanitize.xul	chrome://piigeon/content/sanitizeOverlay.xul

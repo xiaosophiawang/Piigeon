@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>piigeon@cs.washington.edu</em:id>
+		<em:name>Piigeon</em:name>
+		<em:version>1.5.0</em:version>
+		<em:type>2</em:type>
+		<em:creator>Xiao (Sophia) Wang</em:creator>
+		<em:description>Checks whether Web sites protect your logins and other personal information</em:description>
+		<em:homepageURL>http://piigeon.org/</em:homepageURL>
+		<em:optionsURL>chrome://piigeon/content/Options.xul</em:optionsURL>
+		<em:iconURL>chrome://piigeon/skin/global32.png</em:iconURL>
+
+		<em:updateURL>https://secure.piigeon.org/releases-public/update.rdf</em:updateURL>
+
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>3.5</em:minVersion>
+				<em:maxVersion>8.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>      
+</RDF>

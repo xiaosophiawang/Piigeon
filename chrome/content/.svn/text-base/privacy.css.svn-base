@@ -1,0 +1,172 @@
+/* See license.txt for terms of usage */
+#panel_left {
+    /*
+     position: fixed;
+     
+     height: 30px;
+     bottom: 3px;
+     left: 5px;
+     */
+}
+
+#panel_right {
+    position: fixed;
+    /*
+     height: 30px;
+     bottom: 3px;
+     right: 5px;
+     */
+}
+
+#button_options {
+    /*
+     background-color: white;
+     */
+}
+
+#p_profile {
+    font: bold 12pt; 
+}
+
+#p_vbox {
+	left: 20px;
+}
+
+.icon-12 {
+	width: 12px;
+	height: 12px;
+}
+
+.tippanel {
+    font: normal 8pt; 
+    padding: 3px; 
+    border: solid 1px;
+	width: 400px;
+}
+
+.logo_grey {
+    list-style-image: url(chrome://piigeon/skin/global16-gray.png);
+}
+
+
+.logo_color {
+    list-style-image: url(chrome://piigeon/skin/global16.png);
+}
+
+.button_noalert {
+    color: black;
+}
+
+.button_alert {
+    color: red;
+}
+
+.title {
+    text-align: left;
+    font-family: Georgia, Times New Roman;
+    font-size: 32px;
+}
+
+.recordBody {
+    font-family: Georgia, Times New Roman;
+    font-size: 16px;
+}
+
+.recordItem {
+    font-family: Georgia, Times New Roman;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.recordItem:link {
+    color: #0000cc;
+    text-decoration: none;
+}
+
+.recordItem:visited {
+    text-decoration: none;
+    color: #0000cc;
+}
+
+.recordItem:hover {
+    color: #999999;
+    text-decoration: underline;
+}
+
+.embeddedLink {
+	text-decoration: underline;
+}
+
+.greenFamily {
+    color: #55ff55;
+    font-size: 48px;
+}
+.redFamily {
+    color: #ff5555;
+    font-size: 48px;
+}
+.grayFamily {
+    color: #555555;
+    font-size: 48px;
+}
+
+.lr-item {
+	border-top: 1px solid #dddddd;
+	height: 40px;
+}
+.lr-title {
+	font-weight: bold;
+}
+.lr-domainName {
+	font-size: medium;
+	font-weight: bold;
+	
+}
+.lr-domainNameSmall {
+	font-size: small;
+	font-weight: bold;
+	
+}
+.lr-vst {
+    color: #aaaaaa;
+	font-size:smaller;
+}
+.lr-pass-yes {
+	font-size: medium;
+	font-weight: bold;
+}
+.lr-pass-no {
+	font-size: medium;
+	font-weight: bold;
+	color: #aaaaaa;
+}
+.lr-pass-alert {
+	font-size: x-small;
+	color: #ff8888;
+}
+.lr-pass-alert-click {
+	font-size: x-small;
+	font-weight: bold;
+	color: #ffffff;
+}
+.lr-pass-hint {
+	font-size: x-small;
+	color: #aaaaaa;
+}
+.lr-locimage {
+	height: 30px;
+	width: 30px;
+}
+.lr-center {
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+.lr-rating {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.lr-loc-detail {
+	font-size: x-small;
+}
+

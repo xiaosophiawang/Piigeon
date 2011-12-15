@@ -1,0 +1,46 @@
+chrome/content/
+  About.xul
+    Content of the About dialog
+  Options.js
+    Handles user choices in Preferences dialog
+  Options.xul
+    Content of the Preferences dialog
+  Report.js
+    Handles the content of report (read from DB)
+  Report.xul
+    Content of the Report dialog
+  overlay.xul
+    Piigeon overlay, the entrance of the extension
+  privacy-db.js
+    Handles DB operations
+  privacy-debug.js
+    For debugging, it should be turned on only in internal versions
+  privacy-feedback.js
+    Collects whether users stop logging in with Piigeon
+  privacy-http.js
+    Monitors http traffic and sends callback functions to check whether a password is sent
+  privacy-input.js
+    Monitors other form inputs not only password fields
+  privacy-loginObserver.js
+    Oberves whether a login is submitted
+  privacy-prediction.js
+    Monitors x seconds after a login is submitted (x = 5 here). Provides a callback function
+    to the http observer. This way binds the predicted and actual logins together
+  privacy-prefs.js
+    Handles user preferences
+  privacy-server.js
+    Sends data to our server. We first cache data locally and send them in a batch at certain
+    time. Currently we send login info (anonymized urls related to a login, whether a login
+    is sent encrypted), session info (whether a user is on Piigeon on a particular day), and
+    evaluation info. We don't collect anonymized identifiers and users can turn this off at
+    any time.
+  privacy-utils.js
+    Handles all the utility functions (stupid stuffs that are not provided directly in javascript)
+  privacy-wireless.js
+    Reads from Firefox's wireless API
+  privacy.css
+  privacy.js
+    
+  sanitizeOverlay.js
+  sanitizeOverlay.xul
+
