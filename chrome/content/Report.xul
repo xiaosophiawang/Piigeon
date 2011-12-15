@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://piigeon/content/privacy.css"?>
+
+
+<!DOCTYPE dialog SYSTEM "chrome://piigeon/locale/Report.dtd">
+
 <dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
  xmlns:html="http://www.w3.org/1999/xhtml"
  id="dialog_Configuration"
@@ -18,50 +22,31 @@
   						<hbox width="800px" height="30px">
   							<hbox width="5px"/>
   							<vbox width="80px">
-    							<label value="Safety" class="lr-title"/>
-    							<label value="Rating" class="lr-title"/>
+    							<label value="&report.menu_safety;" class="lr-title"/>
+    							<label value="&report.menu_rating;" class="lr-title"/>
     						</vbox>
   							<hbox width="20px">
     						</hbox>
   							<hbox width="200px">
-    							<label value="Domain" class="lr-title"/>
+    							<label value="&report.menu_domain;" class="lr-title"/>
     						</hbox>
   							<hbox width="220px">
-    							<label value="Change your password?" class="lr-title"/>
+    							<label value="&report.menu_change_pwd;" class="lr-title"/>
     						</hbox>
   							<hbox width="50px">
-    							<label value="Locations" class="lr-title"/>
+    							<label value="&report.menu_locations;" class="lr-title"/>
     						</hbox>
             				<spacer flex="1"/>
   							<hbox style="clear:right;">
-    							<label value="Help" class="text-link" href="http://piigeon.org/"/>
+    							<label value="&report.help;" class="text-link" href="http://piigeon.org/"/>
     						</hbox>
   							<hbox style="clear:right;">
-    							<button label="Remove All" oncommand="removeAll()"/>
+    							<button label="&report.remove_all;" oncommand="removeAll()"/>
     						</hbox>
             				
   						</hbox>
             	<richlistbox id="id-rlb" height="400px" width="800px" style="overflow: auto;"
             	  onselect="onListSelect(selectedIndex);">
-  					<!--richlistitem height="30px">
-  						<hbox>
-  							<vbox width="80px">
-    							<label value="Safety" class="lr-title"/>
-    							<label value="Rating" class="lr-title"/>
-    						</vbox>
-  							<hbox width="20px">
-    						</hbox>
-  							<hbox width="200px">
-    							<label value="Domain" class="lr-title"/>
-    						</hbox>
-  							<hbox width="230px">
-    							<label value="Change your password?" class="lr-title"/>
-    						</hbox>
-  							<hbox width="50px">
-    							<label value="Locations" class="lr-title"/>
-    						</hbox>
-  						</hbox>
-  					</richlistitem-->
 				</richlistbox>
             	</vbox>
             </vbox>

@@ -6,7 +6,7 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://global/skin/passwordmgr.css" type="text/css"?>
 
-<!DOCTYPE dialog SYSTEM "chrome://passwordmgr/locale/passwordManager.dtd">
+<!DOCTYPE window SYSTEM "chrome://piigeon/locale/Options.dtd">
 
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
  xmlns:html="http://www.w3.org/1999/xhtml"
@@ -23,29 +23,26 @@
     	
     <tabbox>
         <tabs>
-            <tab label="Privacy Policy"/>
-            <tab label="Input Monitor"/>
+            <tab label="&options.tab_policy;"/>
+            <tab label="&options.tab_monitor;"/>
         </tabs>
         <tabpanels>
             <tabpanel>
                 	<vbox>
 	                	<vbox>
-	                		<html:textarea rows="7" cols="50" readonly="readonly">Please help us to improve Piigeon and learn 
-	                		about Web privacy in practice by opting in to report anonymous information about how Web sites protect 
-	                		passwords. We do NOT collect information that can be used to identify you or link you to Web browsing 
-	                		activities, as that would defeat our goal of protecting your privacy.</html:textarea>
+	                		<html:textarea rows="7" cols="50" readonly="readonly">&options.policy_content;</html:textarea>
 	                		
-	                		<label value="Click here for our detailed privacy policy" class="text-link" href="http://piigeon.org/privacy.html"/>
+	                		<label value="&options.policy_link;" class="text-link" href="http://piigeon.org/privacy.html"/>
 	                		
 	                		<radiogroup>
-  								<radio id="allow" label="Allow Piigeon to report anonymous information." selected="true" oncommand="selectServer();"/>
-  								<radio id="notallow" label="Do not allow Piigeon to report anonymous information." oncommand="selectServer();"/>
+  								<radio id="allow" label="&options.policy_allow;" selected="true" oncommand="selectServer();"/>
+  								<radio id="notallow" label="&options.policy_disallow;" oncommand="selectServer();"/>
 							</radiogroup>
 						</vbox>
                 	</vbox>
             </tabpanel>
         	<tabpanel>
-	             <checkbox id="monitor-0" label="Provide Piigeon with feedback for all form inputs." oncommand="inputMonitor();"/>
+	             <checkbox id="monitor-0" label="&options.monitor_all;" oncommand="inputMonitor();"/>
         	</tabpanel>
         </tabpanels>
     </tabbox>

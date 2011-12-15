@@ -1,0 +1,7 @@
+<!ENTITY options.tab_policy "隐私政策">
+<!ENTITY options.tab_monitor "输入监控">
+<!ENTITY options.policy_content "通过向我们发送关于网站如何保护密码的匿名报告，您可以帮助我们优化Piigeon，让我们了解实际的Web隐私状况。我们不会收集能辨认您身份和与您浏览记录相关联的信息，因为这违背了我们保护隐私的初衷。">
+<!ENTITY options.policy_link "点击这里查看详细隐私政策">
+<!ENTITY options.policy_allow "允许Piigeon发送匿名报告">
+<!ENTITY options.policy_disallow "不允许Piigeon发送匿名报告">
+<!ENTITY options.monitor_all "允许Piigeon监控所有输入框">

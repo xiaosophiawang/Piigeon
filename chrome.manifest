@@ -1,5 +1,6 @@
 content	piigeon	chrome/content/
 locale	piigeon	en-US chrome/locale/en-US/
+locale	piigeon	zh-CN chrome/locale/zh-CN/
 skin piigeon classic/1.0 chrome/skin/
 
 overlay	chrome://browser/content/browser.xul	chrome://piigeon/content/overlay.xul

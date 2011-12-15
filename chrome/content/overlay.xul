@@ -4,6 +4,8 @@
 <?xml-stylesheet href="chrome://piigeon/content/privacy-profile.css"?>
 <?xml-stylesheet href="chrome://piigeon/content/mopTip/mopTip-2.2.css"?>
 
+<!DOCTYPE overlay SYSTEM "chrome://piigeon/locale/overlay.dtd">
+
 <overlay id="overlay_piigeon"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
  xmlns:html="http://www.w3.org/1999/xhtml">
@@ -33,22 +35,22 @@
     
     <!-- menu -->
     <menupopup id="menu_ToolsPopup">
-        <menu id="menu_piigeon" label="Piigeon"
+        <menu id="menu_piigeon" label="&overlay.menu_label;"
             image="chrome://piigeon/skin/global16.png" class="menuitem-iconic menu-iconic">
             <menupopup id="menu1-popup">
-                <menuitem id="menu1_Preferences" label="Preferences"
+                <menuitem id="menu1_Preferences" label="&overlay.menu_preferences;"
                  oncommand="window.openDialog('chrome://piigeon/content/Options.xul', 'Preferences', 'chrome,centerscreen');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu1_Report" label="Report"
+                <menuitem id="menu1_Report" label="&overlay.menu_report;"
                  oncommand="window.openDialog('chrome://piigeon/content/Report.xul', 'Report', 'chrome,centerscreen');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu1_Feedback" label="Feedback"
+                <menuitem id="menu1_Feedback" label="&overlay.menu_feedback;"
                  oncommand="gBrowser.selectedTab = gBrowser.addTab('https://secure.piigeon.org/forum/');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu1_About" label="About"
+                <menuitem id="menu1_About" label="&overlay.menu_about;"
                  oncommand="window.openDialog('chrome://piigeon/content/About.xul', 'About', 'chrome,centerscreen');"/>
                  
             </menupopup>
@@ -63,24 +65,24 @@
             <!-- detail in privacy.js -->
             <image id="p_loginImage" width="16px" height="16px" src="" collapsed="true"/>
             <label id="p_loginAlert" value="" collapsed="true"/>
-            <image id="p_StatusLogoImage" class="logo_grey" tooltiptext="About Piigeon" popup="menu-popup"/>
+            <image id="p_StatusLogoImage" class="logo_grey" tooltiptext="&overlay.about;" popup="menu-popup"/>
         </statusbarpanel>
         
         <popupset>
             <menupopup id="menu-popup">
-                <menuitem id="menu_Preferences" label="Preferences"
+                <menuitem id="menu_Preferences" label="&overlay.menu_preferences;"
                  oncommand="window.openDialog('chrome://piigeon/content/Options.xul', 'Preferences', 'chrome,centerscreen');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu_Report" label="Report"
+                <menuitem id="menu_Report" label="&overlay.menu_report;"
                  oncommand="window.openDialog('chrome://piigeon/content/Report.xul', 'Report', 'chrome,centerscreen');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu_Feedback" label="Feedback"
+                <menuitem id="menu_Feedback" label="&overlay.menu_feedback;"
                  oncommand="gBrowser.selectedTab = gBrowser.addTab('https://secure.piigeon.org/forum/');"/>
                 
                 <menuseparator/>
-                <menuitem id="menu_About" label="About"
+                <menuitem id="menu_About" label="&overlay.menu_about;"
                  oncommand="window.openDialog('chrome://piigeon/content/About.xul', 'About', 'chrome,centerscreen');"/>
                  
             </menupopup>

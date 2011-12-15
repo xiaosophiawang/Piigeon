@@ -1,0 +1,9 @@
+<!ENTITY about_dialog.title "关于Piigeon">
+<!ENTITY about_dialog.version "版本">
+<!ENTITY about_dialog.page "主页">
+<!ENTITY about_dialog.info "其它信息">
+<!ENTITY about_dialog.policy "隐私政策">
+<!ENTITY about_dialog.manual "用户手册">
+<!ENTITY about_dialog.feedback "反馈我们">
+<!ENTITY about_dialog.contributers "参与者">
+<!ENTITY about_dialog.sophia "王晓 (Sophia)">

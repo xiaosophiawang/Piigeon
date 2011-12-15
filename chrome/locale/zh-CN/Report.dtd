@@ -1,0 +1,7 @@
+<!ENTITY report.menu_safety "安全">
+<!ENTITY report.menu_rating "评分">
+<!ENTITY report.menu_domain "域名">
+<!ENTITY report.menu_change_pwd "需要改变密码？">
+<!ENTITY report.menu_locations "地点">
+<!ENTITY report.help "帮助">
+<!ENTITY report.remove_all "删除全部">
