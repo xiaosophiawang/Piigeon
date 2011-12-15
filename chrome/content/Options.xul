@@ -12,6 +12,7 @@
  xmlns:html="http://www.w3.org/1999/xhtml"
  id="dialog_Configuration"
  onload="window.focus();"
+ title="&options.title;"
  ondialogaccept="OK();">
  
     <prefpane onpaneload="init();">

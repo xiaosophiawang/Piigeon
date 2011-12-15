@@ -24,6 +24,10 @@
     <script type="application/x-javascript" src="privacy-server.js"/>
     <script type="application/x-javascript" src="privacy-debug.js"/>
     
+    <stringbundleset id="stringbundleset">
+      <stringbundle id="string-bundle" src="chrome://piigeon/locale/Report.properties"/>
+    </stringbundleset>
+    
     <!-- Firebug panel -->
     <vbox id="appcontent">
         <splitter id="fbContentSplitter" collapsed="true"/>

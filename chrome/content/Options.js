@@ -13,8 +13,6 @@ if (!piigeon) {
 
 // This is called when the preference page is opened
 function init(){
-    document.title = "Piigeon Preferences";
-    
     // Read from preferences whether we should send data to our server
     var pref = prefService.getBoolPref("extensions.piigeon.measure.server");
     var allow = document.getElementById("allow");

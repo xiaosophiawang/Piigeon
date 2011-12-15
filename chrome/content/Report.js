@@ -17,6 +17,7 @@ var wirelessItems;
 var lastSelectIndex = 0;
 var sharedPasswds = [];
 var addrs = [];
+var stringsBundle;
 
 if (!piigeon) {
 	var piigeon = {};
@@ -26,10 +27,9 @@ if (!piigeon) {
 // It reads and processes info from the local db and passes it to addListItem() which handles the visual part
 // of the report
 function init() {
-	document.title = "Piigeon Report";
-
 	// Initialize DB
 	piigeon.dbController.init();
+    stringsBundle = document.getElementById("string-bundle");
 
 	// Read login info from password manager for comparison with logins 
 	// that are sent in the clear (and potentially compromised across multiple sites)
@@ -98,7 +98,7 @@ function init() {
 
 				var visitText = piigeon.utils.timeNum2Text(v.length, true)
 						+ ", ";
-				visitText += "last visit "
+				visitText += stringsBundle.getString('string_last_visit')
 						+ piigeon.utils.elapsedTime(v[v.length - 1].time,
 								currentTime);
 				
@@ -114,8 +114,7 @@ function init() {
 		}
 
 		var visitText = piigeon.utils.timeNum2Text(visit, true) + ", ";
-		visitText += "last visit "
-				+ piigeon.utils.elapsedTime(latestTime, currentTime);
+		visitText += stringsBundle.getString('string_last_visit') + piigeon.utils.elapsedTime(latestTime, currentTime);
 
 		var enclevel = Math.floor(g / (g + b) * 5);
 
@@ -235,26 +234,26 @@ function addListItem(site, visitText, enclevel, enc, type) {
 			passa.setAttribute("class", "lr-pass-hint");
 		} else {
 			if (enc == "true" && passshare.countBad) {
-				passa.setAttribute("value", "Yes");
+				passa.setAttribute("value", stringsBundle.getString('string_yes'));
 				passa.setAttribute("class", "lr-pass-yes");
 			} else {
-				passa.setAttribute("value", "No");
+				passa.setAttribute("value", stringsBundle.getString('string_no'));
 				passa.setAttribute("class", "lr-pass-no");
 			}
 			if (enc == "true") {
 				if (passshare.countBad == 0)
-					temp = "(Shared with " + passshare.countGood
-							+ " safe sites)";
+					temp = stringsBundle.getString('string_share') + passshare.countGood
+							+ stringsBundle.getString('string_safe_sites');
 				else
-					temp = "(Shared with " + passshare.countBad
-							+ " unsafe sites)";
+					temp = stringsBundle.getString('string_share') + passshare.countBad
+							+ stringsBundle.getString('string_unsafe_sites');
 			} else {
 				if (passshare.countGood == 0)
-					temp = "(Shared with " + passshare.countBad
-							+ " unsafe sites)";
+					temp = stringsBundle.getString('string_share') + passshare.countBad
+							+ stringsBundle.getString('string_unsafe_sites');
 				else
-					temp = "(Shared with " + passshare.countGood
-							+ " safe sites)";
+					temp = stringsBundle.getString('string_share') + passshare.countGood
+							+ stringsBundle.getString('string_safe_sites');
 			}
 			passb.setAttribute("value", temp);
 			passb.setAttribute("class", "lr-pass-alert");
@@ -432,7 +431,7 @@ function onListSelect(selectedIndex) {
 	try {
 		var ps = rlb.childNodes[lastSelectIndex].childNodes[0].childNodes[3].childNodes[0].childNodes[0];
 
-		if (ps.getAttribute("value") == "The site password isn't stored")
+		if (ps.getAttribute("value") == stringsBundle.getString('string_site_not_store_pwd'))
 			ps.setAttribute("value", "");
 	} catch (e) {
 	}
@@ -483,7 +482,7 @@ function onListSelect(selectedIndex) {
 		var ps = rlb.childNodes[selectedIndex].childNodes[0].childNodes[3].childNodes[0].childNodes[0];
 
 		if (ps.getAttribute("value") == "")
-			ps.setAttribute("value", "The site password isn't stored");
+			ps.setAttribute("value", stringsBundle.getString('string_site_not_store_pwd'));
 	} catch (e) {
 	}
 }

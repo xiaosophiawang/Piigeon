@@ -220,7 +220,8 @@ piigeon.utils = {
     },
     
     elapsedTime: function(t_1, t_2){
-		
+		var stringsBundle = document.getElementById("string-bundle");
+        
 		t_1 = t_1.toString();
 		t_2 = t_2.toString();
 		
@@ -257,32 +258,32 @@ piigeon.utils = {
         
         if (t.year > 0) {
             if (t.year > 1) 
-                return t.year + " years ago";
+                return t.year + stringsBundle.getString('string_years_ago');
             else 
-                return "1 year ago";
+                return t.year + stringsBundle.getString('string_year_ago');
         }
         if (t.month > 0) {
             if (t.month > 1) 
-                return t.month + " months ago";
+                return t.month + stringsBundle.getString('string_months_ago');
             else 
-                return "1 month ago";
+                return t.month + stringsBundle.getString('string_month_ago');
         }
         if (t.date > 0) {
             var week = Math.floor(t.date / 7);
             if (week > 0) {
 				if (week > 1) 
-					return week + " weeks ago";
+					return week + stringsBundle.getString('string_weeks_ago');
 				else 
-					return "1 week ago";
+					return week + stringsBundle.getString('string_week_ago');
 			}
 			else {
 				if (t.date > 1) 
-					return t.date + " days ago";
+					return t.date + stringsBundle.getString('string_days_ago');
 				else 
-					return "yesterday";
+					return stringsBundle.getString('string_yesterday');
 			}
         }
-        return "today";
+        return stringsBundle.getString('string_today');
     },
 
     compareTime: function(t_1, t_2){
@@ -590,24 +591,25 @@ piigeon.utils = {
 	},
 	
 	timeNum2Text: function(number, capital) {
+		var stringsBundle = document.getElementById("string-bundle");
 		if (capital) {
 			switch (number) {
 				case 1:
-					return "Once";
+					return stringsBundle.getString('string_once');
 				case 2:
-					return "Twice";
+					return stringsBundle.getString('string_twice');
 				default:
-					return number + " times";
+					return number + stringsBundle.getString('string_times');
 			}
 		}
 		else {
 			switch (number) {
 				case 1:
-					return "once";
+					return stringsBundle.getString('string_once');
 				case 2:
-					return "twice";
+					return stringsBundle.getString('string_twice');
 				default:
-					return number + " times";
+					return number + stringsBundle.getString('string_times');
 			}
 		}
 	},

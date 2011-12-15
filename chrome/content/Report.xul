@@ -9,6 +9,7 @@
  xmlns:html="http://www.w3.org/1999/xhtml"
  id="dialog_Configuration"
  buttons="accept"
+ title="&report.title;"
  onload="window.focus();init();"
  ondialogaccept="return OK();">
     
@@ -16,38 +17,41 @@
     <script type="application/x-javascript" src="chrome://piigeon/content/privacy-db.js"/>
     <script type="application/x-javascript" src="chrome://piigeon/content/privacy-utils.js"/>
     
+    <stringbundleset id="stringbundleset">
+      <stringbundle id="string-bundle" src="chrome://piigeon/locale/Report.properties"/>
+    </stringbundleset>
+    
             <vbox>
             	<vbox>
             	
-  						<hbox width="800px" height="30px">
-  							<hbox width="5px"/>
-  							<vbox width="80px">
-    							<label value="&report.menu_safety;" class="lr-title"/>
-    							<label value="&report.menu_rating;" class="lr-title"/>
-    						</vbox>
-  							<hbox width="20px">
-    						</hbox>
-  							<hbox width="200px">
-    							<label value="&report.menu_domain;" class="lr-title"/>
-    						</hbox>
-  							<hbox width="220px">
-    							<label value="&report.menu_change_pwd;" class="lr-title"/>
-    						</hbox>
-  							<hbox width="50px">
-    							<label value="&report.menu_locations;" class="lr-title"/>
-    						</hbox>
-            				<spacer flex="1"/>
-  							<hbox style="clear:right;">
-    							<label value="&report.help;" class="text-link" href="http://piigeon.org/"/>
-    						</hbox>
-  							<hbox style="clear:right;">
-    							<button label="&report.remove_all;" oncommand="removeAll()"/>
-    						</hbox>
-            				
-  						</hbox>
-            	<richlistbox id="id-rlb" height="400px" width="800px" style="overflow: auto;"
-            	  onselect="onListSelect(selectedIndex);">
-				</richlistbox>
+  			<hbox width="800px" height="30px">
+  				<hbox width="5px"/>
+  				<vbox width="80px">
+    				<label value="&report.menu_safety;" class="lr-title"/>
+    				<label value="&report.menu_rating;" class="lr-title"/>
+    			</vbox>
+  				<hbox width="20px">
+    			</hbox>
+  				<hbox width="200px">
+    				<label value="&report.menu_domain;" class="lr-title"/>
+    			</hbox>
+  				<hbox width="220px">
+    				<label value="&report.menu_change_pwd;" class="lr-title"/>
+    			</hbox>
+  				<hbox width="50px">
+    				<label value="&report.menu_locations;" class="lr-title"/>
+    			</hbox>
+			      <spacer flex="1"/>
+  				<hbox style="clear:right;">
+    				<label value="&report.help;" class="text-link" href="http://piigeon.org/"/>
+    			</hbox>
+  				<hbox style="clear:right;">
+    				<button label="&report.remove_all;" oncommand="removeAll()"/>
+    			</hbox>
+            	
+  			</hbox>
+			<richlistbox id="id-rlb" height="400px" width="800px" style="overflow: auto;" onselect="onListSelect(selectedIndex);">
+			</richlistbox>
             	</vbox>
             </vbox>
 </dialog>
