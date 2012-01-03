@@ -18,7 +18,7 @@ piigeon.server = {
 
     /* Don't modify this area BEGIN */
 	version : "publicxxx", // alpha, beta, public
-	piigeonVersion : "1.5.0",
+	piigeonVersion : "1.5.1",
     /* Don't modify this area END */
 
 	fid : null,
@@ -63,7 +63,7 @@ piigeon.server = {
 		} catch (e) {
 		}
 
-		setInterval("piigeon.server.checkClock();", 60000);
+		setInterval(function() { piigeon.server.checkClock();}, 60000);
 	},
 
     // Sync local clock to server clock and adjust the difference if there is any.
@@ -316,7 +316,8 @@ piigeon.server = {
 // data to our server
 function serverxhr(url, data) {
 	var ch;
-	var req = new XMLHttpRequest();
+	//var req = new XMLHttpRequests();
+	var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance();
 	if (data != null)
 		ch = true;
 	else

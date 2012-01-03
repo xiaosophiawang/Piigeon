@@ -136,20 +136,20 @@ piigeon = {
 		try {
 			var anchor = doc.getElementById("presBubble");
 			if (actionUrl == "") {
-				anchor.innerHTML = "<img src='" + piigeon.utils.questImageURI
+				anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.questImageURI)
 						+ "' width='20px' height='20px'/>";
 				loginText.setAttribute('value',
 						'Sorry, Piigeon cannot tell whether your password will be encrypted.');
 				loginImage.setAttribute('src', piigeon.utils.questImageURI);
 			} else if (actionUrl.split("/")[0] == "https:") {
-				anchor.innerHTML = "<img src='" + piigeon.utils.checkImageURI
+				anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.checkImageURI)
 						+ "' width='20px' height='20px'/>";
 				loginText.setAttribute('value',
 						'This page sends your password with encryption.');
 				loginImage.setAttribute('src', piigeon.utils.checkImageURI);
 
 			} else if (actionUrl.split("/")[0] == "http:") {
-				anchor.innerHTML = "<img src='" + piigeon.utils.crossImageURI
+				anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.crossImageURI)
 						+ "' width='20px' height='20px'/>";
 				loginText.setAttribute('value',
 						'This page lets eavesdroppers see your password.');
@@ -241,20 +241,20 @@ piigeon = {
 		var height = box.bottom - box.top;
 
 		if (actionUrl == "") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.questImageURI + "' width='"
-					+ height + "px' height='" + height + "px'/>";
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.questImageURI) + "' width='"
+					+ piigeon.utils.escapeHTML(height) + "px' height='" + piigeon.utils.escapeHTML(height) + "px'/>";
 			loginText.setAttribute('value',
 					'Sorry, Piigeon cannot tell whether your password will be encrypted.');
 			loginImage.setAttribute('src', piigeon.utils.questImageURI);
 		} else if (actionUrl.split("/")[0] == "https:") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.checkImageURI + "' width='"
-					+ height + "px' height='" + height + "px'/>";
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.checkImageURI) + "' width='"
+					+ piigeon.utils.escapeHTML(height) + "px' height='" + piigeon.utils.escapeHTML(height) + "px'/>";
 			loginText.setAttribute('value',
 					'This page sends your password with encryption.');
 			loginImage.setAttribute('src', piigeon.utils.checkImageURI);
 		} else if (actionUrl.split("/")[0] == "http:") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.crossImageURI + "' width='"
-					+ height + "px' height='" + height + "px'/>";
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.crossImageURI) + "' width='"
+					+ piigeon.utils.escapeHTML(height) + "px' height='" + piigeon.utils.escapeHTML(height) + "px'/>";
 			loginText.setAttribute('value',
 					'This page lets eavesdroppers see your password.');
 			loginImage.setAttribute('src', piigeon.utils.crossImageURI);
@@ -867,7 +867,7 @@ piigeon = {
     // If a previous prediction is incorrect, we need to adjust it by the actual login
 	updatePrediction : function(url, site, siteUrl, actionUrl, enc, time) {
         // This should be prevented if the user chooses not to save any historical info
-		if (!prefService.getBoolPref("extensions.piigeon.historyblock")) {
+		if (prefService.getBoolPref("extensions.piigeon.historyblock")) {
             return;
         }
         
@@ -900,7 +900,7 @@ piigeon = {
     // Insert the actual login that'll be shown in Piigeon Report
 	insertLoginactual : function(site, siteUrl, url, enc, time, values) {
         // This should be prevented if the user chooses not to save any historical info
-		if (!prefService.getBoolPref("extensions.piigeon.historyblock")) {
+		if (prefService.getBoolPref("extensions.piigeon.historyblock")) {
             return;
         }
         
@@ -909,6 +909,7 @@ piigeon = {
 			piigeon.debug.methodCounter("piigeon.insertLoginactual");
 		} catch (e) {
 		}
+        
 
 		if (site != piigeon.utils.findSite(siteUrl))
 			return;
@@ -921,6 +922,7 @@ piigeon = {
 		} else {
 			var mac = values[0].maxMac;
 			var ssid = values[0].maxSSID;
+            /*
 			var geolocation = Components.classes["@mozilla.org/geolocation;1"]
 					.getService(Components.interfaces.nsIDOMGeoGeolocation);
 			geolocation.getCurrentPosition(function(position) {
@@ -928,7 +930,7 @@ piigeon = {
 						+ " " + position.coords.longitude;
 				piigeon.dbController.insertLoginactual(site, siteUrl, url, enc, time, wls);
 				piigeon.findAddress(position.coords.latitude, position.coords.longitude);
-			});
+			});*/
 		}
 
         // Send evaluation info to our server
@@ -1010,7 +1012,7 @@ piigeon = {
 				+ latitude + "&lng=" + longitude;
 		var req = new XMLHttpRequest();
 		var responseText = "";
-		req.open('GET', url, false);
+		req.open('GET', url, true);
 		req.overrideMimeType('text/plain; charset=x-user-defined');
 		req.send(null);
 		if (req.status == 200)

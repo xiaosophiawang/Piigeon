@@ -4,7 +4,7 @@ pref("extensions.piigeon.hasShownStartingPage", false);  // Show first run page 
 /////////// Other preferences to control piigeon monitoring and reporting
 // Send to our server (users can choose in "Preferences")
 pref("extensions.piigeon.measure.server", true);
-// Monitor form inputs besides passwords (users can choose in "Preferences")
+// Monitor form inputs besides pw (users can choose in "Preferences")
 pref("extensions.piigeon.input.monitor", false);
 // Show only unprotected login in reports (we decide to show all reports now)
 pref("extensions.piigeon.login.unprotected", false);
@@ -14,7 +14,7 @@ pref("extensions.piigeon.locatioin.choice", 2);
 pref("extensions.piigeon.history", 0);
 // Don't save any historical info to sqlite db. This is calculated based on several factors (e.g., whether on
 // private browsing, whether the user chooses to do so, etc.
-pref("extensions.piigeon.historyblock", true);
+pref("extensions.piigeon.historyblock", false);
 // Try to use this bit as shared storage that solves the multiple-browser problem
 pref("extensions.piigeon.multiple.browser", 0);
 

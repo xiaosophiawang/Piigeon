@@ -11,7 +11,7 @@ if (!piigeon) {
     var piigeon = {};
 }
 
-// This is called when the preference page is opened
+// This is called when the preference page is openemonitor-alld
 function init(){
     // Read from preferences whether we should send data to our server
     var pref = prefService.getBoolPref("extensions.piigeon.measure.server");
@@ -27,8 +27,8 @@ function init(){
     }
         
     // Read from preferences whether we should monitor other inputs
-    pref = prefService.getBoolPref("extensions.piigeon.input.monitor");
-    var monitor_0 = document.getElementById("monitor-0");
+    var pref = prefService.getBoolPref("extensions.piigeon.input.monitor");
+    var monitor_0 = document.getElementById("monitor-all");
 	if (pref)
 		monitor_0.setAttribute("checked", "true");
 	else
@@ -54,7 +54,7 @@ function selectServer() {
 
 // This is called when the users toggles to monitor all form inputs (not only passwords).
 function inputMonitor() {
-	var monitor_0 = document.getElementById("monitor-0");
+	var monitor_0 = document.getElementById("monitor-all");
 	var ch = false;
 	if (monitor_0.getAttribute("checked"))
 		ch = true;

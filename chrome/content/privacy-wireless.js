@@ -4,7 +4,7 @@
  * we can predict the location and reflect in the "Report" if any.
  */
 
-netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+//netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
 var wifi_service = Components.classes["@mozilla.org/wifi/monitor;1"].getService(Components.interfaces.nsIWifiMonitor);
 wifi_service.startWatching(piigeon.wireless);
 
@@ -16,7 +16,7 @@ piigeon.wireless = {
     values: null,
     
     onChange: function(accessPoints){
-        netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+        //netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
         var maxMac = "";
         var maxSSID = "";
         var maxSignal = -999999;
@@ -47,7 +47,7 @@ piigeon.wireless = {
     },
     
     QueryInterface: function(iid){
-        netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+        //netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
         if (iid.equals(Components.interfaces.nsIWifiListener) ||
         iid.equals(Components.interfaces.nsISupports)) 
             return this;

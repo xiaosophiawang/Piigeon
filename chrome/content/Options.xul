@@ -43,7 +43,7 @@
                 	</vbox>
             </tabpanel>
         	<tabpanel>
-	             <checkbox id="monitor-0" label="&options.monitor_all;" oncommand="inputMonitor();"/>
+	             <checkbox id="monitor-all" label="&options.monitor_all;" oncommand="inputMonitor();"/>
         	</tabpanel>
         </tabpanels>
     </tabbox>

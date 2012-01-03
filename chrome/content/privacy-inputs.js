@@ -136,15 +136,15 @@ piigeon.inputs = {
 			height = 24;
 
 		if (actionUrl == "") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.questImageURI + "' width='"
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.questImageURI) + "' width='"
 					+ height + "px' height='" + height
 					+ "px' style='opacity:0.4;filter:alpha(opacity=40)'/>";
 		} else if (actionUrl.split("/")[0] == "https:") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.checkImageURI + "' width='"
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.checkImageURI) + "' width='"
 					+ height + "px' height='" + height
 					+ "px' style='opacity:0.4;filter:alpha(opacity=40)'/>";
 		} else if (actionUrl.split("/")[0] == "http:") {
-			anchor.innerHTML = "<img src='" + piigeon.utils.crossImageURI + "' width='"
+			anchor.innerHTML = "<img src='" + piigeon.utils.escapeHTML(piigeon.utils.crossImageURI) + "' width='"
 					+ height + "px' height='" + height
 					+ "px' style='opacity:0.4;filter:alpha(opacity=40)'/>";
 		}

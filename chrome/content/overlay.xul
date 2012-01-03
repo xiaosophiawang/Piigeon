@@ -51,7 +51,7 @@
                 
                 <menuseparator/>
                 <menuitem id="menu1_Feedback" label="&overlay.menu_feedback;"
-                 oncommand="gBrowser.selectedTab = gBrowser.addTab('https://secure.piigeon.org/forum/');"/>
+                 oncommand="gBrowser.selectedTab = gBrowser.addTab('https://addons.mozilla.org/en-US/firefox/addon/piigeon/');"/>
                 
                 <menuseparator/>
                 <menuitem id="menu1_About" label="&overlay.menu_about;"
@@ -83,7 +83,7 @@
                 
                 <menuseparator/>
                 <menuitem id="menu_Feedback" label="&overlay.menu_feedback;"
-                 oncommand="gBrowser.selectedTab = gBrowser.addTab('https://secure.piigeon.org/forum/');"/>
+                 oncommand="gBrowser.selectedTab = gBrowser.addTab('https://addons.mozilla.org/en-US/firefox/addon/piigeon/');"/>
                 
                 <menuseparator/>
                 <menuitem id="menu_About" label="&overlay.menu_about;"

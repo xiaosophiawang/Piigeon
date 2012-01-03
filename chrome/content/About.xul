@@ -15,7 +15,7 @@
 		<spacer style="height:15px"/>
 		<description value="&about_dialog.version;" style="font-weight:bold;"/>
 		<hbox>
-			<label value="1.5.0"/>
+			<label value="1.5.1"/>
 			<spacer flex="1"/>     	
 		</hbox>
 		
